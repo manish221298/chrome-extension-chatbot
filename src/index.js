@@ -1,13 +1,45 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import App from "./App";
+import VoiceApp from "./VoiceApp";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+let chatContainer = localStorage.getItem("name");
+
+// let data = JSON.parse(localStorage.getItem("capturedUrlData"));
+// let num = 0
+
+// console.log("index.js page", data);
+
+const chatStatus = (status) => {
+  chatContainer = status;
+  console.log("normal status is chat", status);
+  window.location.reload();
+};
+
+// console.log("chatContainer chatContainer", chatContainer);
+
+// Function to update data variable and log updated data
+// const updateData = () => {
+//   data = JSON.parse(localStorage.getItem("capturedUrlData"));
+//    num = Math.random()
+//   console.log("Updated data:", data, num);
+// };
+
+// // Listen for changes in localStorage
+// window.addEventListener("storage", (event) => {
+//   if (event.key === "capturedUrlData") {
+//     updateData();
+//   }
+// });
+
 root.render(
   <React.StrictMode>
-    <App />
+    {chatContainer === "normalChat" && <App />}
+    {chatContainer === "voiceChat" && <VoiceApp chatStatus={chatStatus} />}
   </React.StrictMode>
 );
 

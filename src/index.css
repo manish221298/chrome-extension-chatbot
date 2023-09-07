@@ -11,3 +11,107 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* // chat widget functionality design */
+
+/* App.css */
+
+.chat-layout {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  /* Adjust the width as needed */
+  height: 400px;
+  /* Adjust the height as needed */
+  border: 2px solid #c5c1c1;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-footer {
+  margin-top: auto;
+  /* Push the footer to the bottom */
+  padding: 16px;
+  position: fixed;
+  bottom: 0;
+  width: 95%;
+  margin: 12px;
+}
+
+.author {
+  font-size: 1.2rem;
+  color: black;
+}
+
+.content {
+  color: rgb(0, 255, 76);
+  font-size: 1.2rem;
+}
+
+
+/* // voice call component style */
+.voice-call {
+  margin: 30px;
+}
+
+.voiceButton {
+  border: none;
+  background: transparent;
+}
+
+.voice-chat-button {
+  border: none;
+  background: transparent;
+  margin: 10px
+}
+
+.voice-chat-span {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+
+
+
+/* Assuming you have a .message-list class for the parent container */
+.message-list {
+  display: flex;
+  flex-direction: column;
+  /* Stack messages vertically */
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  /* Stack author and content vertically */
+  align-items: flex-start;
+  /* Align items to the left side */
+  margin-bottom: 10px;
+  /* Add some spacing between messages */
+}
+
+.author {
+  background-color: #f0f0f0;
+  /* Optional background color for the author */
+  padding: 5px;
+  border-radius: 5px;
+  text-align: left; 
+  margin-left: 20px;
+  margin-right: 100px;
+  /* Add spacing between author and content */
+}
+
+.content {
+  background-color: #e2f1fd;
+  /* Optional background color for the content */
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 100px;
+  text-align: left;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
